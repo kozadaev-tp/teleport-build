@@ -2,6 +2,6 @@
 
 Usage:
 ```
-make build-linux
+make build/linux
 ```
 The resulting binaries will be in `./build/*`
