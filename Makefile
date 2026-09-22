@@ -6,8 +6,8 @@ BUILD_DIR           ?= builds
 
 # Binaries built by Teleport's native build system
 TELEPORT_BIN       = $(TELEPORT_E_SRC_DIR)/build/teleport
-TCTL_BIN           = $(TELEPORT_SRC_DIR)/build/tctl
-TSH_BIN            = $(TELEPORT_SRC_DIR)/build/tsh
+TCTL_BIN           = $(TELEPORT_E_SRC_DIR)/build/tctl
+TSH_BIN            = $(TELEPORT_E_SRC_DIR)/build/tsh
 TBOT_BIN           = $(TELEPORT_SRC_DIR)/build/bot
 
 .PHONY: all build init config bootstrap run stop clean restart
