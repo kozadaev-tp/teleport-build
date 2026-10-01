@@ -66,7 +66,7 @@ build/linux/tbot: dirs
 	mkdir -p ${BUILD_DIR}/linux && \
 	cd $(TELEPORT_SRC_DIR) && \
 	CC=/opt/homebrew/bin/x86_64-unknown-linux-gnu-gcc GOOS=linux GOARCH=amd64 CGO_ENABLED=1 \
-		go build -buildvcs=false -tags "webassets_embed webassets" -o build/bot -ldflags '-w -s  -X k8s.io/component-base/version.gitVersion=v1.34.0' -trimpath -buildmode=pie ./tool/tbot && \
+		go build -buildvcs=false -o build/bot -ldflags '-w -s  -X k8s.io/component-base/version.gitVersion=v1.34.0' -trimpath -buildmode=pie ./tool/tbot && \
 	cd - && cp -f ${TBOT_BIN} ./${BUILD_DIR}/linux/
 
 build: build/osx/binaries
